@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <nlohmann/json.hpp>
-#include <typeinfo>
 
 using namespace std;
 using namespace nlohmann;
