@@ -1,0 +1,14 @@
+{
+    "0": {
+        "name": "street cleaner",
+        "price": 0,
+        "multiplierCoins": 0,
+        "multiplierEXP": 0
+    },
+    "1": {
+        "name": "seller",
+        "price": 1000,
+        "multiplierCoins": 1,
+        "multiplierEXP": 0
+    }
+}
