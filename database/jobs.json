@@ -10,5 +10,53 @@
         "price": 1000,
         "multiplierCoins": 1,
         "multiplierEXP": 0
+    },
+    "2": {
+        "name": "delivery driver",
+        "price": 10000,
+        "multiplierCoins": 2,
+        "multiplierEXP": 1
+    },
+    "3": {
+        "name": "taxi driver",
+        "price": 100000,
+        "multiplierCoins": 3,
+        "multiplierEXP": 2
+    },
+    "4": {
+        "name": "guard",
+        "price": 1000000,
+        "multiplierCoins": 4,
+        "multiplierEXP": 3
+    },
+    "5": {
+        "name": "courier",
+        "price": 10000000,
+        "multiplierCoins": 5,
+        "multiplierEXP": 4
+    },
+    "6": {
+        "name": "office worker",
+        "price": 100000000,
+        "multiplierCoins": 6,
+        "multiplierEXP": 5
+    },
+    "7": {
+        "name": "plumber",
+        "price": 1000000000,
+        "multiplierCoins": 7,
+        "multiplierEXP": 6
+    },
+    "8": {
+        "name": "medic",
+        "price": 10000000000,
+        "multiplierCoins": 8,
+        "multiplierEXP": 7
+    },
+    "9": {
+        "name": "chef",
+        "price": 100000000000,
+        "multiplierCoins": 9,
+        "multiplierEXP": 8
     }
 }
