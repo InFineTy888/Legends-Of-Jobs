@@ -1,0 +1,20 @@
+{
+    "balance": {
+        "coins": 0,
+        "diamonds": 0
+    },
+    "levelSys": {
+        "exp": 0,
+        "level": 1,
+        "needexp": 20,
+        "totalexp": 0
+    },
+    "other": {
+        "multiplierCoins": 1,
+        "multiplierEXP": 1
+    },
+    "userInfo": {
+        "jobID": "0",
+        "name": "guest"
+    }
+}
