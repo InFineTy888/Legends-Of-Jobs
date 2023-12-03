@@ -6,34 +6,35 @@
 ![Discord](https://img.shields.io/discord/1180895516532416542)
 ![GitHub License](https://img.shields.io/github/license/InFineTy888/Legends-Of-Jobs)
 
-# Введение
+# Introduction
 
-**Legends Of Jobs** — это простая экономическая игра в которой вам нужно зарабатывать монеты и алмазы, работы и уровни, и т.д!
-
-Сейчас это игра доступна только в интерфейсе командной строки, в будующем я сделаю её в графическом интерфейсе!
+**Legends Of Jobs** is a simple economic game in which you need to earn coins and diamonds, jobs and levels, etc!
 
 
-Игра написана на Debian 12, и если на **Windows** у вас есть проблемы с компиляцией или кодом игры, извените.
+Now this game is only available in the CLI, in the future I will make it in the GUI!
 
-## Что нужно для того чтобы запустить нашу игру:
 
-- Сам **C++** :)
+The game is written on Debian 12, and if you have problems compiling or coding the game on **Windows**, I'm sorry.
 
-- И библиотека **nlohmann json**, для работы с json-файлами
+## What you need to run the game:
 
-## Установка библиотеки `nlohmann json`
+- **C++** :)
 
-На **Linux** вам нужно ввести:
+- And **nlohmann json** libraries for working with json-files
+
+## Installing the `lohmann json` library
+
+On **Linux** you need to enter:
 ```
 sudo apt install nlohmann-json3-dev
 ```
-Для **Windows** вам нужно:
+For **Windows** you need:
 - **CMake**
 - **Vcpkg**
 
-Чтобы установить **CMake**, скачайте его с [официального сайта](https://cmake.org/download/) ( При установке не забудьте поменять опцию, чтобы путь к CMake был добавлен в переменную PATH )
+To install **CMake**, download it from the [official website](http://cmake.org/download /) ( During installation, do not forget to change the option so that the path to CMake is added to the PATH variable )
 
-Чтобы установить **vcpkg** вам нужно в командной строке ввести:
+To install **vcpkg** you need to type in the command line:
 ```
 git clone https://github.com/Microsoft/vcpkg
 
@@ -42,35 +43,46 @@ cd vcpkg
 powershell -exec bypass scripts\bootstrap.ps1
 
 vcpkg install sdl2:x86-windows-static sdl2:x64-windows-static
+
+vcpkg --triplet nlohmann-json
+```
+Last but not least, enable the automatic integration of vcpkg packages into all Visual C++ projects:
+```
+vcpkg integrate install
 ```
 
-## Компоновка файла `main.cpp` на Linux
-- Вам потребуется **G++** для этого
+We remove the integration - if it interferes with you.
+```
+vcpkg integrate remove
+```
+
+## File layout `main.cpp ` on Linux
+- You will need **G++** for this
   
-**Вам нужно ввести:**
+**You need to enter:**
 ```
 cd Legends-Of-Jobs
 g++ main.cpp -o main
 ```
 
-**Чтобы запустить игру вам нужно ввести:**
+**To start the game, you need to enter:**
 ```
 ./main
 ```
 
-## Компоновка файла `main.cpp` на Windows
-Для выполнения необходимо установить Visual Studio и дополнительную рабочую нагрузку Разработка настольных приложений на C++ или Build Tools командной строки для Visual Studio.
+## File layout `main.cpp ` on Windows
+To run, you need to install Visual Studio and the additional workload of Developing desktop applications in C++ or Build command-line Tools for Visual Studio.
 
-Если вы установили Visual Studio 2017 или более поздней версии в Windows 11 или более поздней версии, откройте меню Пуск и выберите Все приложения. Прокрутите вниз и откройте папку Visual Studio. Выберите элемент Командная строка разработчика для VS, чтобы открыть окно командной строки.
+If you have installed Visual Studio 2017 or later on Windows 11 or later, open the Start menu and select All Applications. Scroll down and open the Visual Studio folder. Select Developer's Command Prompt for VS to open a command prompt window.
 
-Если вы установили Microsoft Visual C++ Build Tools 2015 в Windows 11 или более поздней версии, откройте меню Пуск и выберите Все приложения. Прокрутите вниз и откройте папку Microsoft Visual C++ Build Tools. Выберите элемент Командная строка Native Tools x86 Visual C++ 2015, чтобы открыть окно командной строки.
+If you have installed Microsoft Visual C++ Build Tools 2015 on Windows 11 or later, open the Start menu and select All Applications. Scroll down and open the Microsoft Visual C++ Build Tools folder. Select Command Prompt Native Tools x86 Visual C++ 2015 to open a command prompt window.
 ```
-cd C:\путь-к-папке\Legends-Of-Jobs
+cd C:\path-to-folder\Legends-Of-Jobs
 cl /c main.cpp
 ```
-Если вы хотите запустить программу `main.exe`, в командной строке введите `main`
+If you want to run the program `main.exe`, at the command prompt, type `main`
 
-## Развлекайтесь!
-Меняйте код, информации пользователя, работы, и т.д!
+## Have fun!
+Change the code, user information, jobs, etc!
 
-Удачной игры :)
+Have a good game :)
