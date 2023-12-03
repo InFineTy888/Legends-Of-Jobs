@@ -1,4 +1,4 @@
-# Legends-Of-Jobs
+# Legends Of Jobs
 
 ![Language](https://img.shields.io/badge/language-C++-blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/InFineTy888/Legends-Of-Jobs)
@@ -22,7 +22,7 @@ The game is written on Debian 12, and if you have problems compiling or coding t
 
 - And **nlohmann json** libraries for working with json-files
 
-## Installing the `lohmann json` library
+## Installing the `nlohmann-json` library
 
 On **Linux** you need to enter:
 ```
@@ -32,7 +32,7 @@ For **Windows** you need:
 - **CMake**
 - **Vcpkg**
 
-To install **CMake**, download it from the [official website](http://cmake.org/download /) ( During installation, do not forget to change the option so that the path to CMake is added to the PATH variable )
+To install **CMake**, download it from the [official website](http://cmake.org/download/) ( During installation, do not forget to change the option so that the path to CMake is added to the PATH variable )
 
 To install **vcpkg** you need to type in the command line:
 ```
@@ -56,7 +56,7 @@ We remove the integration - if it interferes with you.
 vcpkg integrate remove
 ```
 
-## File layout `main.cpp ` on Linux
+## File layout `main.cpp` on Linux
 - You will need **G++** for this
   
 **You need to enter:**
@@ -70,7 +70,7 @@ g++ main.cpp -o main
 ./main
 ```
 
-## File layout `main.cpp ` on Windows
+## File layout `main.cpp` on Windows
 To run, you need to install Visual Studio and the additional workload of Developing desktop applications in C++ or Build command-line Tools for Visual Studio.
 
 If you have installed Visual Studio 2017 or later on Windows 11 or later, open the Start menu and select All Applications. Scroll down and open the Visual Studio folder. Select Developer's Command Prompt for VS to open a command prompt window.
