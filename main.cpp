@@ -65,11 +65,13 @@ void Work(const vector<string>& arguments);
 void Jobs(const vector<string>& arguments);
 void Buy(const vector<string>& arguments);
 void SetName(const vector<string>& arguments);
+void Help(const vector<string>& arguments);
 
 int main() {
     srand(time(NULL));
 
-    cout << "In order to save your progress, you need to enter the 'quit' command before exiting, otherwise your progress will be lost." << endl << endl;
+    cout << "In order to save your progress, you need to enter the 'quit' command before exiting, otherwise your progress will be lost." << endl;
+    cout << "Enter 'help', to show you all the commands that are in the game" << endl << endl;
 
     bool run = true;
 
@@ -105,6 +107,9 @@ int main() {
         }
         else if(commandName == "setname") {
             SetName(arguments);
+        }
+        else if(commandName == "help") {
+            Help(arguments);
         }
         else if(commandName == "quit") {
             ofstream jsonOut("./database/user.json");
@@ -168,6 +173,15 @@ int randomNumber(int min, int max) {
     return num;
 }
 
+void Help(const vector<string>& arguments) {
+    cout << endl << "All commands in the game:" << endl;
+    cout << "profile - shows your stats" << endl;
+    cout << "work - earn coins and exp" << endl;
+    cout << "jobs int<page> - shows all jobs" << endl;
+    cout << "buy int<jobID> - purchasing a vacancy" << endl;
+    cout << "setname string<name> - give you a new name" << endl;
+}
+
 void Profile(const vector<string>& arguments) {
     if(arguments.empty()) {
         string jobName = jobsData[userData["userInfo"]["jobID"].get<string>()]["name"];
@@ -194,7 +208,7 @@ void Profile(const vector<string>& arguments) {
         cout << "└───╼ Job: " << jobName << " ( ID: " << userData["userInfo"]["jobID"].get<string>() << " )" << endl;
         cout << "Balance:" << endl;
         cout << "├───╼ Coins: " << convertToShortNumber(userData["balance"]["coins"].get<double>()) << " ( " << userData["balance"]["coins"].get<unsigned int>() << " )" << endl;
-        cout << "└───╼ Diamonds: " << userData["balance"]["diamonds"].get<unsigned int>() << endl;
+        cout << "└───╼ Diamonds: " << convertToShortNumber(userData["balance"]["diamonds"].get<unsigned int>()) << endl;
         cout << "Experience:"<< endl;
         cout << "├───╼ Level: " << userData["levelSys"]["level"].get<unsigned int>() << endl;
         cout << "├───╼ Total Exp: " << userData["levelSys"]["totalexp"].get<unsigned int>() << endl;
@@ -217,7 +231,7 @@ void Work(const vector<string>& arguments) {
         userData["levelSys"]["totalexp"] = userData["levelSys"]["totalexp"].get<unsigned int>() + exp;
         userData["levelSys"]["exp"] = userData["levelSys"]["exp"].get<unsigned int>() + exp;
 
-        cout << endl << "You have earned " << coins << " Coins, and " << exp << " Exp" << endl << endl;
+        cout << endl << "You have earned " << convertToShortNumber(coins) << " Coins, and " << convertToShortNumber(exp) << " Exp" << endl << endl;
     }
 }
 
@@ -239,7 +253,7 @@ void Jobs(const vector<string>& arguments) {
         for (int id = start; id < end; id++) {
             if (jobsData.find(to_string(id)) != jobsData.end()) {
                 jobsFound = true;
-                cout << "Job: " << jobsData[to_string(id)]["name"].get<string>() << endl << "ID: " << id << ", Цена: " << jobsData[to_string(id)]["price"] << " Exp" << endl << "MultiplierCoins: " << jobsData[to_string(id)]["multiplierCoins"] << ", MultiplierEXP: " << jobsData[to_string(id)]["multiplierEXP"] << endl << endl;
+                cout << "Job: " << jobsData[to_string(id)]["name"].get<string>() << endl << "ID: " << id << ", Price: " << convertToShortNumber(jobsData[to_string(id)]["price"]) << " Coins" << endl << "MultiplierCoins: " << jobsData[to_string(id)]["multiplierCoins"] << ", MultiplierEXP: " << jobsData[to_string(id)]["multiplierEXP"] << endl << endl;
             } else 
                 break;
         }
