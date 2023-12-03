@@ -1,5 +1,6 @@
+<img align="left" width="100" height="100" src="https://github.com/InFineTy888/Legends-Of-Jobs/blob/main/LOJ.png">
+
 # Legends Of Jobs
-![Logo](https://github.com/InFineTy888/Legends-Of-Jobs/blob/main/LOJ.png){50px}
 ![Language](https://img.shields.io/badge/language-C++-blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/InFineTy888/Legends-Of-Jobs)
 ![GitHub Repo stars](https://img.shields.io/github/stars/InFineTy888/Legends-Of-Jobs)
