@@ -1,4 +1,4 @@
-<img align="left" width="100" height="100" src="https://github.com/InFineTy888/Legends-Of-Jobs/blob/main/LOJ.png">
+<img align="left" width="100" height="100" src="https://github.com/InFineTy888/Legends-Of-Jobs/blob/main/LJ.png">
 
 # Legends Of Jobs
 ![Language](https://img.shields.io/badge/language-C++-blue)
