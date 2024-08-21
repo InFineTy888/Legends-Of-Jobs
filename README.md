@@ -58,7 +58,7 @@ vcpkg integrate remove
 ```
 
 ## File layout `main.cpp` on Linux
-- You will need **G++** for this
+- You will need **C++** for this
   
 **You need to enter:**
 ```
